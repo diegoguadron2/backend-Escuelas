@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+
+[build.env]
+CACHE_DRIVER = "file"
+SESSION_DRIVER = "file"
+
+[deploy]
+startCommand = "sh start.sh"
