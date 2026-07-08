@@ -14,7 +14,7 @@ class ReporteController extends Controller
     {
         $usuario = $request->user();
 
-        $query = School::withCount('alumnos');
+        $query = School::with('usuario')->withCount('alumnos');
 
         if (! $usuario->isAdministrador()) {
             $query->where('id_user', $usuario->id_user);
